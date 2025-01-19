@@ -7,7 +7,7 @@ class SudokuGame {
         this.isPaused = false;
         this.mistakes = 0;
         this.solution = null;
-        this.currentGame = null; // Store current game state
+        this.currentGame = null;  // Store current game state
         this.isNotesMode = false;
         this.notes = Array(9).fill().map(() => 
             Array(9).fill().map(() => new Set())
