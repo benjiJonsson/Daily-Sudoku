@@ -1,6 +1,6 @@
 # Daily Sudoku Challenge
 
-A web-based Sudoku game that provides daily puzzles with different difficulty levels, featuring a leaderboard system and persistent game state.
+A web-based Sudoku game that provides daily puzzles with different difficulty levels. 
 
 ## Features
 
