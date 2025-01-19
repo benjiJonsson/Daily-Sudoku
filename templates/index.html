@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Sudoku Challenge</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Daily Sudoku Challenge</h1>
+            <div class="timer-container">
+                <div id="next-puzzle">Next puzzles in: <span id="countdown">Loading...</span></div>
+                <div id="current-date">Today: <span id="date">Loading...</span></div>
+            </div>
+        </header>
+
+        <main>
+            <div class="difficulty-selector">
+                <h2>Select Difficulty</h2>
+                <div class="difficulty-buttons">
+                    <button class="difficulty-btn" data-difficulty="Easy">Easy</button>
+                    <button class="difficulty-btn" data-difficulty="Medium">Medium</button>
+                    <button class="difficulty-btn" data-difficulty="Hard">Hard</button>
+                    <button class="difficulty-btn" data-difficulty="Very Hard">Very Hard</button>
+                    <button class="difficulty-btn" data-difficulty="Expert">Expert</button>
+                </div>
+            </div>
+
+            <div id="game-container" class="hidden">
+                <div class="game-header">
+                    <div class="game-stats">
+                        <div class="solve-timer">Time: <span id="solve-time">00:00</span></div>
+                        <div class="mistakes"></div>
+                    </div>
+                    <div class="game-controls-group">
+                        <button id="notes-btn" class="control-btn">Notes</button>
+                        <button id="new-game-btn" class="control-btn">New Game</button>
+                        <button id="pause-btn" class="control-btn">Pause</button>
+                    </div>
+                </div>
+
+                <div class="sudoku-grid-container">
+                    <div class="sudoku-grid">
+                        <!-- Grid will be populated by JavaScript -->
+                        <div class="horizontal-line horizontal-line-1"></div>
+                        <div class="horizontal-line horizontal-line-2"></div>
+                    </div>
+                </div>
+
+                <div class="number-pad-container">
+                    <div class="number-pad-controls">
+                        <button id="notes-btn" class="control-btn">Notes</button>
+                        <button class="num-btn erase" data-num="0">Erase</button>
+                    </div>
+                    <div class="number-pad">
+                        <button class="num-btn" data-num="1">1</button>
+                        <button class="num-btn" data-num="2">2</button>
+                        <button class="num-btn" data-num="3">3</button>
+                        <button class="num-btn" data-num="4">4</button>
+                        <button class="num-btn" data-num="5">5</button>
+                        <button class="num-btn" data-num="6">6</button>
+                        <button class="num-btn" data-num="7">7</button>
+                        <button class="num-btn" data-num="8">8</button>
+                        <button class="num-btn" data-num="9">9</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="leaderboard" class="hidden">
+                <h2>Daily Leaderboard</h2>
+                <div class="leaderboard-tabs">
+                    <button class="tab-btn active" data-difficulty="Easy">Easy</button>
+                    <button class="tab-btn" data-difficulty="Medium">Medium</button>
+                    <button class="tab-btn" data-difficulty="Hard">Hard</button>
+                    <button class="tab-btn" data-difficulty="Very Hard">Very Hard</button>
+                    <button class="tab-btn" data-difficulty="Expert">Expert</button>
+                </div>
+                <div class="leaderboard-content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Time</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboard-body">
+                            <!-- Will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html> 
