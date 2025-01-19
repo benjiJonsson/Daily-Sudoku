@@ -99,6 +99,7 @@ daily-sudoku-challenge/
 ## Next Steps needed
 1. Daily leaderboards for each difficulty level
 2. Ability to send your completed time to someone else to compete with you
+3. Link Grading API to my masters dissertation repo: https://github.com/benjiJonsson/CS5099-Masters-Dissertation
 
 ## Acknowledgments
 - Inspired by the New York Times Sudoku and sudoku.com
